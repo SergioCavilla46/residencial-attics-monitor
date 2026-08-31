@@ -1,0 +1,1566 @@
+												<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+			<meta charset="UTF-8"/>	
+	<meta name="description" content="Conozca todos los detalles de nuestros nuevos pisos en Puerto de Sagunto." />
+	<meta name="Classification" content="" />
+	<meta name="keywords" content="Viviendas nuevos Puerto de Sagunto| Viviendas nueva obra Puerto de Sagunto" />
+	<meta name="audience" content="All" />	
+	<meta name="robots" content="all" />
+	<meta name="subject" content="" />
+	<meta name="copyright" content="" />
+	<meta name="Publisher" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+    <meta name="google-site-verification" content="WLAyv4c53nqbiBJBBzQL1Slp4O9bnf-KIVS9VOpfb0M">
+	
+	<link href="imgTemplate/logo-1024.jpg" rel="apple-touch-icon" />
+	<link href="imgTemplate/logo-192.jpg" rel="icon" sizes="192×192" />
+	<link href="imgTemplate/logo-128.jpg" rel="icon" sizes="128×128" />
+    
+    <meta property="og:image" itemprop="image" content="https://www.residencialatics.com/images/secciones/Calidades/OAL.jpg" />    
+	<title>Viviendas - Obra nueva Puerto de Sagunto - Obra Nueva Puerto Sagunto</title>		
+    <base href="https://www.residencialatics.com/" /> 
+	
+    <link rel="stylesheet" type="text/css" href="scripts/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="estilos/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/header.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/estilos_resp.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/header_resp.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/topnav1.css" />
+	<link rel="stylesheet" type="text/css" href="estilos/topnav1_resp.css" />
+	
+    <link rel="shortcut icon" href="imgTemplate/favicon.ico">
+	
+	<script src="scripts/jquery-1.10.2.min.js"></script>
+	<script src="scripts/bxslider/jquery.bxslider.js"></script>
+    <script src="scripts/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script src="scripts/fancybox/jquery.fancybox-1.3.4_patch.js"></script>
+    <script src="scripts/respond.js"></script>
+	<!--[if lt IE 9]>
+        <script src="scripts/css3-mediaqueries.js"></script>
+		<script src="scripts/html5shiv.js"></script>
+	<![endif]-->
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	  <script type="text/javascript" src="scripts/selectivizr.js"></script>
+	  <noscript><link rel="stylesheet" href="estilos/estilos.css" /></noscript>
+      <noscript><link rel="stylesheet" href="estilos/menu.css" /></noscript>
+      <noscript><link rel="stylesheet" href="scripts/bxslider/jquery.bxslider.css" /></noscript>
+	<![endif]--> 
+   
+   <script> 
+			
+    		$(document).ready(function() {
+				var textContact = $('#ContactInformationContact').html();	
+				
+    			$("a[rel=galeria_imagenes]").fancybox({
+    				'titlePosition' 	: 'over',
+    				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+    					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+    				}
+    			});	
+				
+    			$(".popup").fancybox({
+    				'titlePosition' 	: 'over',
+    				'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+    					return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+    				}
+    			});	
+                
+                $("a[rel=fancy_imagen]").fancybox({
+    				'titlePosition' 	: 'over'
+    			});	
+				
+				controlIconContactar();
+				controlWidthSearch();
+							
+				$(window).bind('resize orientationchange', function() {
+					controlIconContactar();
+					controlWidthSearch();
+				});
+				
+				
+               
+			   
+            });
+			
+			/* Control de texto para el icono contactar de la cabecera*/
+			function controlIconContactar(){
+				if(document.body.clientWidth > 992){
+					$('#ContactInformation').find( '.ObjNormal' ).show();
+					$('#ContactInformation').find( '.ObjResponsive' ).hide();
+					
+				}else{	
+					$('#ContactInformation').find( '.ObjNormal' ).hide();
+					$('#ContactInformation').find( '.ObjResponsive' ).show();
+				}
+				if(document.body.clientWidth > 768){
+					$('#ContactInformationWhatsapp').find( 'span' ).html('');
+					$('#ContactInformationWeb').find( '.normal' ).show();
+					$('#ContactInformationWeb').find( '.responsive' ).hide();
+					
+				}else{	
+					$('#ContactInformationWhatsapp').find( 'span' ).html('&nbsp;');
+					$('#ContactInformationWeb').find( '.normal' ).hide();
+					$('#ContactInformationWeb').find( '.responsive' ).show();
+				}
+			}
+			
+			/* Control de medida box search con menú en versión móvil*/
+			function controlWidthSearch(){				
+				if(document.body.clientWidth > 768){
+					
+				}else{
+					widthWindows =document.body.clientWidth;
+					widthToggleMenu = 42+5; //$('#menu').find('.toggleMenu').width();
+					diferencia = widthWindows-widthToggleMenu;
+					marginBoxSearch = 10;
+					diferencia = diferencia - marginBoxSearch;
+					
+					$('#BoxSearchMovil').css('width',diferencia+'px');
+				}
+			}
+			
+    </script>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135693105-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-135693105-1');
+</script>
+
+<meta name="google-site-verification" content="V1_ovOojwdiMLUBOsEoN3TiPoxhu0_JcdOh5c_HGM4w" />	</head>
+	<body>
+		<div id="cabecera">
+	<div id="headerTop" >
+		<div id="headerTopContainer" class="container">
+			<div id="headerTopRow" class="row">
+				<div id="SocialInformation" class="hidden-xs col-sm-3">
+					<div class="socialTop col-xs-12 col-sm-7 col-md-7">
+											</div>
+									</div>
+				<div id="ContactInformation" class="col-xs-12 col-sm-9 text-right">                            
+					<a href="https://www.tpm-homes.es/" target="_blank"><div id="ContactInformationWeb">
+							<span class="normal">Visite nuestra web TPM HOMES</span><span class="responsive">Visite TPM HOMES</span></div></a><div id="ContactInformationPhone"><span><a href="tel:962 604 395">962 604 395</a> - <a href="tel:655 913 086">655 913 086</a></span></div>					<a id="ContactInformationEmail" href="mailto:info@ababel.es">
+						<span class="ObjNormal">info@ababel.es</span>
+						<span class="ObjResponsive">&nbsp;</span>
+					</a>
+                    <!--
+					<a id="ContactInformationContact" href="contactar">
+						<span class="ObjNormal">Contactar</span>
+						<span class="ObjResponsive">&nbsp;</span>
+					</a>
+				
+                    <a id="ContactInformationLocation" href="contactar">
+						<span class="ObjNormal">Dónde estamos</span>
+						<span class="ObjResponsive">&nbsp;</span>
+					</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="headerMiddle">
+		<div id="headerMiddleContainer" class="container">
+			<div id="headerMiddleRow" class="row">
+				<div class="col-sm-6 col-md-4">
+					<div id="logoCabecera">
+						<a href=""><img src="imgTemplate/logo-web.png" alt="logo web" /></a>
+					</div>
+				</div>				
+				<div class="col-sm-12 col-md-4 headerGif">
+					<img src="/images/secciones/home/cantidades-avaladas.jpg" >
+				</div>
+				<div class="col-sm-12 col-md-4 headerGif">
+                    <img src="/images/secciones/home/banner-licencias.gif" >
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="headerBottom">
+		<div id="headerBottomContainer" class="container">
+			<div id="headerBottomRow" class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 celda_menu">
+					<div id="menu" >
+	<a class="toggleMenu" href="#"></a>
+		
+	
+	<ul id="topnav1" class="toggleMenuMovil"><li>										<a class="open_vacio" target="_self" href="">Inicio</a>
+										</li><li>										<a class="open_vacio" target="_self" href="entorno">Entorno</a>
+										</li>						<li class="active">
+																	<a class="open_vacio" target="_self" href="viviendas">Viviendas</a>
+										</li><li>										<a class="open_vacio" target="_self" href="calidad">Calidades</a>
+										</li><li>										<a class="open_vacio" target="_self" href="zonas-comunes">Zonas comunes</a>
+										</li><li>										<a class="open_vacio" target="_self" href="equipamiento-cocina-y-banos">Equipamiento cocina y baños</a>
+										</li><li>										<a class="open_vacio" target="_self" href="contactar">Contactar</a>
+										</li>				</ul>
+						
+	</div>																															<div id="BoxSearchMovil">
+						<div class="SearchBox"> 	  
+	<form class="boxLatBusqueda" action="busqueda" method="get">
+        <input type="text" name="s" class="SearchBoxInput" placeholder="Buscar"> 
+        <input type="image" class="SearchBoxButton" src="imgTemplate/icons/search-btn.png" alt="Buscar" title="Buscar">  
+   </form>
+</div>					</div>
+				</div>
+			</div>
+		</div>
+	</div>			 			
+</div>        
+		<div id="cuerpo">
+						<div id="cuerpoContainer" class="container">
+				<div id="columnaLateral">
+										
+				</div>
+									
+				<div id="contenido">
+					<h1>Viviendas</h1>
+<h3>&iquest;SUE&Ntilde;AS CON ESTRENAR TU CASA AL MEJOR PRECIO?</h3>
+<p>Residenciales Attics II Homes VPP&nbsp;con zonas comunes, con piscina, jard&iacute;n y sol&aacute;rium te permitir&aacute;n disfrutar de tu nuevo hogar dentro de <strong>Puerto de Sagunto.</strong></p>
+<p>La construcci&oacute;n&nbsp;guarda una est&eacute;tica <strong>elegante y a la vez moderna,</strong>&nbsp;todas ellas pensadas con una <strong>est&eacute;tica y funcionalidad &uacute;nica.</strong></p>
+<h3 style="text-align: left;"><span style="color: #993300;">Garaje incluido en el precio.</span></h3>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Tabla de Viviendas Bloque A:</strong></span></p>
+<table class="col-xs-12 table table-striped table-hover" width="100%">
+<thead>
+<tr><th style="background-color: #d5d5d5; text-align: left;"><strong>Puerta</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Piso</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Dormitorios</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Ba&ntilde;os</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>N&ordm; Garaje</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>N&ordm; Trastero</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Superficie&nbsp;Construida&nbsp;(m<sup>2</sup>)</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Superficie terrazas (m<sup>2</sup>)</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>&nbsp;Plano</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Precio</strong></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Vivienda 1</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">21,45</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A1.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">197.876 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 2</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">65,51</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A2.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">248.808 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 3</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">33,04</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A3.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">261.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 4</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">51</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">68,25</td>
+<td style="text-align: center;">23,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A4.pdf" target="_blank">Ver Plano</a></td>
+<td style="text-align: center;">197.876 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 5</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A5.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">193.083 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 6</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,22</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A6.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">231.219 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 7</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A7.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">239.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 8</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">53</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A8.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">239.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 9</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A9.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">196.083 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 10</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,22</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A10.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">234.219 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 11</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">55</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A11.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">242.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 12</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A12.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">242.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 13</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A13.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">199.083 &euro;</td>
+</tr>
+<tr>
+<td><span style="color: #00ccff;">Vivienda 14</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">Planta 3</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">3</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">2</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">63</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">-</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">77,24</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">22,22</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;"><a style="color: #00ccff;" href="/images/Viviendas/A14.pdf" target="_blank">Ver Plano</a></span></td>
+<td style="text-align: center;"><strong><span style="color: #00ccff;">237.219 &euro;</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 15</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">65</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A15.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">245.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 16</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">66</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A16.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">245.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 17</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A17.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">202.083 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 18</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">57</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">66,39</td>
+<td style="text-align: center;">22,22</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A18.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">240.219 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 19</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">67</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A19.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">248.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 20</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">68</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A20.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">248.666 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 21</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">69</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A21.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">200.079 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 22</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,10</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A22.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 23</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">71</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">68,63</td>
+<td style="text-align: center;">36,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A23.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">216.004 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 24</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">72</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">68,63</td>
+<td style="text-align: center;">36,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A24.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 25</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A25.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">205.083 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 26</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">69,14</td>
+<td style="text-align: center;">8,10</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A26.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 27</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">63,83</td>
+<td style="text-align: center;">4,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A27.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 28</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">73</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">68,63</td>
+<td style="text-align: center;">17,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A28.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">207.083 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 29</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A29.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">205.200 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 30</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">69,14</td>
+<td style="text-align: center;">8,10</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A30.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td><span style="color: #00ccff;">Vivienda 31</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">Planta 7</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">2</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">1</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">64</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">7</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">63,83</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;">4,80</span></td>
+<td style="text-align: center;"><span style="color: #00ccff;"><a style="color: #00ccff;" href="/images/Viviendas/A31.pdf" target="_blank">Ver Plano</a></span></td>
+<td style="text-align: center;"><strong><span style="color: #00ccff;">174.111 &euro;</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 32</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">68,63</td>
+<td style="text-align: center;">17,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/A32.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Tabla de Viviendas Bloque B:</strong></span></p>
+<table class="col-xs-12 table table-striped table-hover" width="100%">
+<thead>
+<tr><th style="background-color: #d5d5d5; text-align: left;"><strong>Puerta</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Piso</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Dormitorios</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Ba&ntilde;os</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>N&ordm; Garaje</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>N&ordm; Trastero</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Superficie&nbsp;Construida&nbsp;(m<sup>2</sup>)</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Superficie terrazas (m<sup>2</sup>)</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>&nbsp;Plano</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Precio</strong></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Vivienda 1</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">87,90</td>
+<td style="text-align: center;">110,95</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B1.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 2</td>
+<td style="text-align: center;">Planta&nbsp;1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">58,11</td>
+<td style="text-align: center;">12,32</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B2.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 3</td>
+<td style="text-align: center;">Planta&nbsp;1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">84,97</td>
+<td style="text-align: center;">19,42</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B3.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">236.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 4</td>
+<td style="text-align: center;">Planta&nbsp;1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">76,46</td>
+<td style="text-align: center;">18,92</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B4.pdf" target="_blank">Ver Plano</a></td>
+<td style="text-align: center;">210.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 5</td>
+<td style="text-align: center;">Planta&nbsp;1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">61,09</td>
+<td style="text-align: center;">8,20</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B5.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 6</td>
+<td style="text-align: center;">Planta&nbsp;2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">58,11</td>
+<td style="text-align: center;">12,32</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B6.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><span style="color: #ffcc00;"><strong>RESERVADO</strong></span></td>
+</tr>
+<tr>
+<td>Vivienda 7</td>
+<td style="text-align: center;">Planta&nbsp;2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">84,97</td>
+<td style="text-align: center;">19,42</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B7.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">241.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 8</td>
+<td style="text-align: center;">Planta&nbsp;2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">76,46</td>
+<td style="text-align: center;">18,92</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B8.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">213.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 9</td>
+<td style="text-align: center;">Planta&nbsp;2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">74</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">61,09</td>
+<td style="text-align: center;">8,20</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B9.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">171.971 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 10</td>
+<td style="text-align: center;">Planta&nbsp;3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">58,11</td>
+<td style="text-align: center;">12,32</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B10.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">176.971 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 11</td>
+<td style="text-align: center;">Planta&nbsp;3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">75</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">84,97</td>
+<td style="text-align: center;">19,42</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B11.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">246.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 12</td>
+<td style="text-align: center;">Planta&nbsp;3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">76</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">76,46</td>
+<td style="text-align: center;">18,92</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B12.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">216.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 13</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">77</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">61,09</td>
+<td style="text-align: center;">8,20</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B13.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 14</td>
+<td style="text-align: center;">Planta&nbsp;4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">58,11</td>
+<td style="text-align: center;">12,32</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B14.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><span style="color: #000000;">178.598 &euro;</span></td>
+</tr>
+<tr>
+<td>Vivienda 15</td>
+<td style="text-align: center;">Planta&nbsp;4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">47</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">84,97</td>
+<td style="text-align: center;">19,42</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B15.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">250.000 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 16</td>
+<td style="text-align: center;">Planta&nbsp;4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">78</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">76,46</td>
+<td style="text-align: center;">18,92</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B16.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">219.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 17</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">46</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">61,09</td>
+<td style="text-align: center;">8,20</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B17.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 18</td>
+<td style="text-align: center;">Planta&nbsp;5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">79</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">57,76</td>
+<td style="text-align: center;">13,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B18.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 19</td>
+<td style="text-align: center;">Planta&nbsp;5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">80</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">84,16</td>
+<td style="text-align: center;">20,32</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B19.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 20</td>
+<td style="text-align: center;">Planta&nbsp;5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">81</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">63,39</td>
+<td style="text-align: center;">38,14</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B20.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">215.500 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 21</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">49,48</td>
+<td style="text-align: center;">16,20</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B21.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">173.330 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 22</td>
+<td style="text-align: center;">Planta&nbsp;6</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">82</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">48,22</td>
+<td style="text-align: center;">7,87</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B22.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 23</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">83</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">79,55</td>
+<td style="text-align: center;">6,70</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B23.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">205.896 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 24</td>
+<td style="text-align: center;">Planta&nbsp;6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">84</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">60,42</td>
+<td style="text-align: center;">4,82</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B24.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 25</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">45,27</td>
+<td style="text-align: center;">5,88</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B25.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">132.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 26</td>
+<td style="text-align: center;">Planta&nbsp;7</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">48,22</td>
+<td style="text-align: center;">7,87</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B26.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 27</td>
+<td style="text-align: center;">Planta&nbsp;7</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">79,55</td>
+<td style="text-align: center;">6,70</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B27.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 28</td>
+<td style="text-align: center;">Planta&nbsp;7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">60,42</td>
+<td style="text-align: center;">4,82</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B28.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">164.874 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 29</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">87</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">45,27</td>
+<td style="text-align: center;">5,88</td>
+<td style="text-align: center;"><a href="/images/Viviendas/B29.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">135.976 &euro;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 14pt;"><strong>Tabla de Viviendas Bloque C:</strong></span></p>
+<table class="col-xs-12 table table-striped table-hover" width="100%">
+<thead>
+<tr><th style="background-color: #d5d5d5; text-align: left;"><strong>Puerta</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Piso</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Dormitorios</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Ba&ntilde;os</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>N&ordm; Garaje</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>N&ordm; Trastero</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Superficie&nbsp;Construida&nbsp;(m<sup>2</sup>)</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Superficie terrazas (m<sup>2</sup>)</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>&nbsp;Plano</strong></th><th style="background-color: #d5d5d5; text-align: center;"><strong>Precio</strong></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Vivienda 1</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">21,45</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C1.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">201.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 2</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">91,16</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C2.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><span style="color: #ffcc00;"><strong>RESERVADO</strong></span></td>
+</tr>
+<tr>
+<td>Vivienda 3</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">68,47</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C3.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">260.736 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 4</td>
+<td style="text-align: center;">Planta Baja</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">68,25</td>
+<td style="text-align: center;">23,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C4.pdf" target="_blank">Ver Plano</a></td>
+<td style="text-align: center;">201.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 5</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C5.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">195.976&euro;&nbsp;</td>
+</tr>
+<tr>
+<td>Vivienda 6</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,30</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C6.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">226.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 7</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C7.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">229.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 8</td>
+<td style="text-align: center;">Planta 1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C8.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">229.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 9</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C9.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 10</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,30</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C10.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">231.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 11</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C11.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">236.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 12</td>
+<td style="text-align: center;">Planta 2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C12.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">233.000 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 13</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C13.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 14</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">&nbsp;</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,30</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C14.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">236.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 15</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">88</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C15.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">241.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 16</td>
+<td style="text-align: center;">Planta 3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">89</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C16.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">238.000 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 17</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C17.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">204.976 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 18</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C18.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">241.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 19</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">&nbsp;</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C19.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">246.373 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 20</td>
+<td style="text-align: center;">Planta 4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">91</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C20.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><span style="background-color: #ffffff; color: #ffcc00;"><strong>RESERVADO</strong></span></td>
+</tr>
+<tr>
+<td>Vivienda 21</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C21.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><span style="color: #ffcc00; background-color: #ffffff;"><strong>RESERVADO</strong></span></td>
+</tr>
+<tr>
+<td>Vivienda 22</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">&nbsp;</td>
+<td style="text-align: center;">77,24</td>
+<td style="text-align: center;">22,30</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C22.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 23</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C23.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 24</td>
+<td style="text-align: center;">Planta 5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,44</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C24.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 25</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C25.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">205.083 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 26</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">69,14</td>
+<td style="text-align: center;">8,10</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C26.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 27</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">78,83</td>
+<td style="text-align: center;">4,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C27.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><span style="color: #ffcc00;"><strong>RESERVADO</strong></span></td>
+</tr>
+<tr>
+<td>Vivienda 28</td>
+<td style="text-align: center;">Planta 6</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C28.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 29</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">64,11</td>
+<td style="text-align: center;">17,00</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C29.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">205.200 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 30</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">40</td>
+<td style="text-align: center;">69,14</td>
+<td style="text-align: center;">8,10</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C30.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;">192.480 &euro;</td>
+</tr>
+<tr>
+<td>Vivienda 31</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">78,83</td>
+<td style="text-align: center;">4,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C31.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+<tr>
+<td>Vivienda 32</td>
+<td style="text-align: center;">Planta 7</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">83,63</td>
+<td style="text-align: center;">21,80</td>
+<td style="text-align: center;"><a href="/images/Viviendas/C32.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+<td style="text-align: center;"><strong><span style="color: #ffcc00;">RESERVADO</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="col-xs-12 table table-striped table-hover" width="100%">
+<thead>
+<tr><th style="background-color: #d5d5d5; text-align: left;">&nbsp;Planos generales</th><th style="background-color: #d5d5d5; text-align: center;">&nbsp;Plano</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Planta baja</td>
+<td style="text-align: center;"><a href="/images/Viviendas/PlantaBaja.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 1</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Planta1.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 2</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Planta2.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 3</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Planta3.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 4</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Planta4.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 5</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Planta5.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 6</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Plantas6_7.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+<tr>
+<td>Planta 7</td>
+<td style="text-align: center;"><a href="/images/Viviendas/Plantas6_7.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table class="col-xs-12 table table-striped table-hover" width="100%">
+<thead>
+<tr><th style="background-color: #d5d5d5; text-align: left;">&nbsp;Zonas comunes</th><th style="background-color: #d5d5d5; text-align: center;"><strong>Piso</strong></th><th style="background-color: #d5d5d5; text-align: center;">&nbsp;Plano</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Garajes</td>
+<td style="text-align: center;">Planta S&oacute;tano</td>
+<td style="text-align: center;"><a href="/images/Viviendas/PlantaSotano.pdf" target="_blank"><span style="color: #808000;">Ver Plano</span></a></td>
+</tr>
+</tbody>
+</table><div class=list><p>&nbsp;</p>		</div>                    
+                    
+                    
+				</div>
+				
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footerTop">
+				<div id="footerTopContainer" class="container">
+				</div>
+			</div>
+			<div id="footerMiddle">
+				<div id="footerMiddleContainer" class="container">
+					<div class="row">
+												
+						
+						
+						<div class="col-xs-12 col-sm-6 col-md-3" id="bloque_4_pie">
+							<div class="titulo_bloque"><img src="imgTemplate/logo-footer.png" alt="logo Inmobiliaria Ababel" class="logo_footer"/>
+								ABABEL INMOBILIARIA							</div>
+							<div class="contenido_bloque columnFooter">
+																	<p>
+										<img style="margin:0px 10px 0px 0px;float:left;max-width: 22px;" src="imgTemplate/icons-footer/icon-footer-address.png" />
+										<span>Viento de Arbones 11<br /><span>Puerto De Sagunto, 46520, (Valencia)</span>										</span>
+									</p>
+																
+								
+																	<p>
+										<img style="margin:0px 10px 0px 0px;float:left;max-width: 22px;" src="imgTemplate/icons-footer/icon-footer-telephone.png">
+										<span><a href="tel:962604395">962 604 395</a></span> - <span><a href="tel:655 913 086">655 913 086</a></span>									</p>
+																
+																
+								
+																	<p>
+										<img style="margin:0px 10px 0px 0px;float:left;max-width: 22px;" src="imgTemplate/icons-footer/icon-footer-mail.png">
+										<span>
+											<a href="mailto:info@ababel.es">info@ababel.es</a>										</span>
+									</p>
+															</div> <!-- /.contenido_bloque -->
+							
+						</div><!-- /#bloque_4_pie -->
+						<div class="col-xs-12 col-sm-6 col-md-4" id="bloque_4_pie">
+							<div class="titulo_bloque"><img src="imgTemplate/logo_anuk.png" alt="logo ANUK INMOBILIARIA" class="logo_footer"/>ANUK INMOBILIARIA</div>
+							<div class="contenido_bloque columnFooter">
+									<p>
+										<img style="margin:0px 10px 0px 0px;float:left;max-width: 22px;" src="imgTemplate/icons-footer/icon-footer-address.png" />
+										<span>
+											Avenida Camp de Moverdre, 99<br /><span>Puerto De Sagunto, 46520 Valencia</span>										</span>
+									</p>
+								
+								
+									<p>
+										<img style="margin:0px 10px 0px 0px;float:left;max-width: 22px;" src="imgTemplate/icons-footer/icon-footer-telephone.png">
+										<span><a href="tel:962682386">962 68 23 86</a></span> - <span><a href="tel:34653939325">653 93 93 25</a></span>									</p>
+
+									<p>
+										<img style="margin:0px 10px 0px 0px;float:left;max-width: 22px;" src="imgTemplate/icons-footer/icon-footer-mail.png">
+										<span>
+											<a href="mailto:coordinacion@anukinmobiliaria.com">coordinacion@anukinmobiliaria.com</a>										</span>
+									</p>
+								
+																</div> <!-- /.contenido_bloque -->
+							
+						</div><!-- /#bloque_4_pie -->
+
+													<div class="col-xs-12 col-sm-6 col-md-3" id="bloque_2_pie">
+								<div class="titulo_bloque">Categorías</div>
+								<div class="contenido_bloque columnFooter"><ul>
+<li><a href="/entorno">Entorno</a></li>
+<li><a href="/viviendas">Viviendas</a></li>
+<li><a href="/zonas-comunes">Zonas comunes</a></li>
+<li><a href="/equipamiento-cocina-y-banos">Equipamiento cocina y ba&ntilde;os</a></li>
+<li><a href="/calidad">Calidades</a></li>
+<li><a href="/contactar">Contactar</a></li>
+</ul></div>							</div>
+												
+						<!--googleoff: index-->
+													<div class="col-xs-12 col-sm-6 col-md-2" id="bloque_3_pie">
+								<div class="titulo_bloque">Información</div>
+								<div class="contenido_bloque "><ul>
+<li><a href="/quienes-somos">Qui&eacute;nes somos</a></li>
+<li><a href="/aviso-legal">Aviso legal</a></li>
+<li><a href="/politica-de-privacidad">Pol&iacute;tica de privacidad</a></li>
+<li><a href="/politica-cookies">Pol&iacute;tica de cookies</a></li>
+</ul></div>							</div>
+												<!--googleon: index-->
+					</div><!-- /.row -->
+				</div> <!-- #footerMiddleContainer -->
+			</div><!-- /#footerMiddle -->
+			<div id="footerBottom">
+				<div id="footerBottomContainer" class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-4 col-md-4 text-left">
+							<div id="copyright">
+								<span>© 2026 Ababel Inmobiliaria</span>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 text-center">
+							<div id="social_footer">
+								                                
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 text-right">
+							<div id="dusnic"><a target="_blank" href="http://www.dusnic.es">Diseño web <img src="imgTemplate/logo-dusnic.png" alt="Dusnic"/></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--googleoff: index--><script language="javascript">
+	$(window).scroll(function () {
+		// El mensaje de cookies se desactiva cuando se supera el scroll de 500 pixeles
+		if ($(window).scrollTop()>600){
+			closeCookies() 
+			}
+	});
+	
+	function closeCookies(){
+		$('#cookies-message').hide();
+	}
+</script>
+
+
+<!--googleoff: snippet-->
+		<div id="cookies-message">
+			<div id="cookies-message-container">
+				<br />
+				<span>
+					<span style="font-weight:bold;padding:0px 0px 10px 0px;">
+						<img src="imgTemplate/icons/warning.png" style="vertical-align:middle;padding:0px 5px 0px 0px;" />Uso de cookies:</span>Utilizamos cookies propias y de terceros para mejorar la experiencia de navegación, y ofrecer contenidos de interés. Al continuar navegando entendemos que se acepta nuestra 
+					<a href="politica-cookies">política de cookies</a>.
+				</span>
+				<br /><a onclick="closeCookies()" class="button_accept" style="cursor:pointer;margin-top:10px;">Aceptar</a>
+			</div>
+		</div><!--googleon: snippet-->
+		<!--googleon: index-->
+		</div>	
+		<script src="scripts/menu.js"></script>
+		
+	</body>	
+</html>
+																																	

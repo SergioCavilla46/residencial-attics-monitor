@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import requests
@@ -6,10 +7,18 @@ from datetime import datetime
 
 URL = "https://www.residencialatics.com/viviendas"
 
+# Topic de producción
 NTFY_TOPIC = "sergio-attics-2-2713"
-NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
+
+# Topic exclusivo para pruebas
+NTFY_TEST_TOPIC = "sergio-attics-test-2-2713"
+
+NTFY_BASE_URL = "https://ntfy.sh"
 
 STATE_FILE = "state.json"
+
+TEST_HTML_FILE = "tests/fixtures/residencial_actual.html"
+TEST_STATE_FILE = "tests/state_before.json"
 
 HEADERS = {
     "User-Agent": (
@@ -50,16 +59,40 @@ def clean(value):
     return value.replace("\xa0", " ").strip()
 
 
-def get_homes():
-    response = requests.get(
-        URL,
-        headers=HEADERS,
-        timeout=30
-    )
+def get_homes(test_mode=False):
+    """
+    Obtiene las viviendas.
 
-    response.raise_for_status()
+    Producción:
+        Descarga la web real.
 
-    soup = BeautifulSoup(response.text, "html.parser")
+    Test:
+        Utiliza el HTML guardado en tests/fixtures/.
+    """
+
+    if test_mode:
+        print("Usando HTML local de prueba...")
+
+        if not os.path.exists(TEST_HTML_FILE):
+            raise FileNotFoundError(
+                f"No existe la fixture de prueba: {TEST_HTML_FILE}"
+            )
+
+        with open(TEST_HTML_FILE, "r", encoding="utf-8") as f:
+            html = f.read()
+
+    else:
+        response = requests.get(
+            URL,
+            headers=HEADERS,
+            timeout=30
+        )
+
+        response.raise_for_status()
+
+        html = response.text
+
+    soup = BeautifulSoup(html, "html.parser")
 
     tables = soup.find_all("table")
 
@@ -71,6 +104,7 @@ def get_homes():
         rows = table.find_all("tr")
 
         for row in rows[1:]:
+
             cells = [
                 clean(cell.get_text(" ", strip=True))
                 for cell in row.find_all(["th", "td"])
@@ -92,13 +126,20 @@ def get_homes():
                 precio
             ) = cells[:10]
 
-            vivienda_num = vivienda.replace("Vivienda ", "").strip()
+            vivienda_num = vivienda.replace(
+                "Vivienda ",
+                ""
+            ).strip()
 
             key = f"bloque-{block_number}-vivienda-{vivienda_num}"
 
             price = parse_price(precio)
 
-            status = "reserved" if price is None else "available"
+            status = (
+                "reserved"
+                if price is None
+                else "available"
+            )
 
             homes[key] = {
                 "block": block_number,
@@ -117,33 +158,115 @@ def get_homes():
     return homes
 
 
-def load_state():
-    if not os.path.exists(STATE_FILE):
+def load_state(test_mode=False):
+    """
+    Carga el estado anterior.
+
+    Producción:
+        state.json
+
+    Test:
+        tests/state_before.json
+    """
+
+    state_file = (
+        TEST_STATE_FILE
+        if test_mode
+        else STATE_FILE
+    )
+
+    if not os.path.exists(state_file):
         return None
 
-    with open(STATE_FILE, "r", encoding="utf-8") as f:
+    with open(state_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def save_state(homes):
+def save_state(homes, test_mode=False):
+    """
+    Guarda el nuevo estado.
+
+    En producción:
+        actualiza state.json.
+
+    En test:
+        no modifica el estado de prueba, para que el escenario
+        sea reproducible en ejecuciones posteriores.
+    """
+
+    if test_mode:
+        print("MODO TEST: estado de prueba no modificado.")
+        return
+
     data = {
         "last_check": datetime.now().isoformat(),
         "homes": homes
     }
 
     with open(STATE_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(
+            data,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
 
 
-def send_ntfy(message):
+def get_ntfy_url(test_mode=False):
+    """
+    Devuelve el endpoint de ntfy correspondiente al entorno.
+
+    IMPORTANTE:
+    El modo test utiliza exclusivamente el topic de pruebas.
+    """
+
+    topic = (
+        NTFY_TEST_TOPIC
+        if test_mode
+        else NTFY_TOPIC
+    )
+
+    # Protección adicional contra errores de configuración.
+    if test_mode and topic == NTFY_TOPIC:
+        raise RuntimeError(
+            "ERROR DE SEGURIDAD: el modo test no puede utilizar "
+            "el topic de producción."
+        )
+
+    return f"{NTFY_BASE_URL}/{topic}"
+
+
+def send_ntfy(message, test_mode=False):
+    """
+    Envía una notificación a ntfy.
+
+    Producción:
+        Topic productivo.
+
+    Test:
+        Topic exclusivo de pruebas.
+    """
+
+    ntfy_url = get_ntfy_url(test_mode)
+
+    if test_mode:
+        message = (
+            "🧪 TEST — RESIDENCIAL ÁTICOS\n\n"
+            + message
+        )
+
     response = requests.post(
-        NTFY_URL,
+        ntfy_url,
         data=message.encode("utf-8"),
-        headers={
-            "Title": "Residencial Áticos",
-            "Priority": "default",
-            "Tags": "house"
-        },
+    headers={
+        "Title": (
+            "TEST - Residencial Aticos"
+            if test_mode
+            else "Residencial Aticos"
+        ),
+        "Priority": "default",
+        "Tags": "house"
+    },
         timeout=15
     )
 
@@ -166,14 +289,20 @@ def home_description(home):
 
 def sales_summary(homes):
     total = len(homes)
+
     reserved = sum(
-        1 for home in homes.values()
+        1
+        for home in homes.values()
         if home["status"] == "reserved"
     )
 
     available = total - reserved
 
-    percentage = (reserved / total * 100) if total else 0
+    percentage = (
+        reserved / total * 100
+        if total
+        else 0
+    )
 
     return (
         total,
@@ -185,11 +314,44 @@ def sales_summary(homes):
 
 def main():
 
-    print("Consultando Residencial Áticos...")
+    parser = argparse.ArgumentParser(
+        description="Monitor de viviendas de Residencial Áticos."
+    )
 
-    homes = get_homes()
+    parser.add_argument(
+        "--test",
+        action="store_true",
+        help=(
+            "Ejecuta el monitor usando la fixture y el estado "
+            "de prueba, enviando las notificaciones al topic de test."
+        )
+    )
 
-    total, reserved, available, percentage = sales_summary(homes)
+    args = parser.parse_args()
+
+    test_mode = args.test
+
+    if test_mode:
+
+        print()
+        print("========================================")
+        print(" MODO TEST")
+        print("========================================")
+        print(f"HTML:  {TEST_HTML_FILE}")
+        print(f"STATE: {TEST_STATE_FILE}")
+        print(f"NTFY:  {NTFY_TEST_TOPIC}")
+        print("========================================")
+        print()
+
+    else:
+
+        print("Consultando Residencial Áticos...")
+
+    homes = get_homes(test_mode)
+
+    total, reserved, available, percentage = sales_summary(
+        homes
+    )
 
     print()
     print("========================================")
@@ -202,12 +364,15 @@ def main():
     print("========================================")
     print()
 
-    old_state = load_state()
+    old_state = load_state(test_mode)
 
     # Primera ejecución
     if old_state is None:
 
-        save_state(homes)
+        save_state(
+            homes,
+            test_mode
+        )
 
         print("Primera ejecución.")
         print("Estado inicial guardado.")
@@ -215,7 +380,10 @@ def main():
 
         return
 
-    old_homes = old_state.get("homes", {})
+    old_homes = old_state.get(
+        "homes",
+        {}
+    )
 
     events = []
 
@@ -249,14 +417,17 @@ def main():
                 + home_description(current)
             )
 
-        # Cambio de precio
+        # CAMBIO DE PRECIO
         elif (
             previous["price"] is not None
             and current["price"] is not None
             and previous["price"] != current["price"]
         ):
 
-            difference = current["price"] - previous["price"]
+            difference = (
+                current["price"]
+                - previous["price"]
+            )
 
             if difference > 0:
                 change = f"+{format_price(difference)}"
@@ -287,21 +458,50 @@ def main():
             f"{available} disponibles\n\n"
         )
 
-        message = summary + "\n\n".join(events)
+        message = (
+            summary
+            + "\n\n".join(events)
+        )
 
         try:
-            send_ntfy(message)
-            print("Notificación enviada a ntfy.")
+
+            send_ntfy(
+                message,
+                test_mode
+            )
+
+            if test_mode:
+                print(
+                    "Notificación de TEST enviada "
+                    "al topic de pruebas."
+                )
+            else:
+                print(
+                    "Notificación enviada a ntfy."
+                )
 
         except Exception as e:
-            print(f"Error enviando ntfy: {e}")
+
+            print(
+                f"Error enviando ntfy: {e}"
+            )
 
     else:
+
         print("Sin cambios.")
 
-    save_state(homes)
+    save_state(
+        homes,
+        test_mode
+    )
 
     print("Estado actualizado.")
+
+    if test_mode:
+        print(
+            "El estado de producción "
+            "no ha sido modificado."
+        )
 
 
 if __name__ == "__main__":
