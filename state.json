@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-08-31T13:14:40.435669",
+  "last_check": "2026-08-31T13:32:45.960731",
   "homes": {
     "bloque-1-vivienda-1": {
       "block": 1,
@@ -12,7 +12,7 @@
       "surface": "64,11",
       "terrace": "21,45",
       "price": 197876.0,
-      "status": "reserved"
+      "status": "available"
     },
     "bloque-1-vivienda-2": {
       "block": 1,
