@@ -1,5 +1,5 @@
 {
-  "last_check": "2026-09-03T15:30:46.627818",
+  "last_check": "2026-09-03T15:45:34.545133",
   "homes": {
     "bloque-1-vivienda-1": {
       "block": 1,
@@ -531,8 +531,8 @@
       "storage": "-",
       "surface": "61,09",
       "terrace": "8,20",
-      "price": 171971.0,
-      "status": "available"
+      "price": null,
+      "status": "reserved"
     },
     "bloque-2-vivienda-10": {
       "block": 2,
